@@ -90,6 +90,12 @@ tp_integrador/
 
 ---
 
+## 🔄 Pipeline de Ingesta Automática
+El proyecto incluye un monitor en tiempo real (`scripts/ingesta_automatica.py`). 
+Al ejecutarlo, cualquier archivo `.pdf` depositado en `data/ejemplos/archivos_fuente/` es detectado, procesado, fragmentado y registrado automáticamente en PostgreSQL con su correspondiente vector.
+
+---
+
 ## 🛠️ Consultas Incluidas en la Evaluación
 
 En el archivo `db/consultas/04_consultas.sql` se incluyen las consultas requeridas que responden a las necesidades clave del negocio:
