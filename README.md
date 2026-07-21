@@ -59,7 +59,7 @@ tp_integrador/
 └── anexos/
     └── material_complementario.md
 
----
+```
 
 ## 🚀 Guía de Ejecución Rápida
 
