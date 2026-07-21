@@ -5,9 +5,9 @@
 ---
 
 ## 👥 Integrantes del Grupo
-* [Andrea Ferenaz]
-* [Mauro Virgilio Blanc]
-* [Juan Pablo Imbrogno]
+* Andrea Ferenaz
+* Mauro Virgilio Blanc
+* Juan Pablo Imbrogno
 
 ---
 
