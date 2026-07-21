@@ -1,0 +1,15 @@
+[
+  {
+    "consulta_id": 5001,
+    "usuario_id": 1,
+    "fecha_hora": "2026-07-21T14:22:10Z",
+    "pregunta_usuario": "¿Qué hago si la turbina empieza a vibrar mucho?",
+    "respuesta_ia": "Si la turbina supera una vibración de 4.5 mm/s, debe iniciar inmediatamente el protocolo de parada de emergencia (Fuente: MN-TURB-001.pdf).",
+    "fuentes_recuperadas": [
+      {
+        "fragmento_id": 101,
+        "score_similitud": 0.9245
+      }
+    ]
+  }
+]
