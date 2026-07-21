@@ -59,57 +59,43 @@ tp_integrador/
 └── anexos/
     └── material_complementario.md
 
+---
 
-🚀 Guía de Ejecución Rápida
-Requisitos Previos
+## 🚀 Guía de Ejecución Rápida
 
-    PostgreSQL v15 o superior instalado.
+### Requisitos Previos
+* PostgreSQL v15 o superior instalado.
+* Extensión `pgvector` instalada en el motor de base de datos.
 
-    Extensión pgvector instalada en el motor de base de datos.
+### Pasos para Replicar el Entorno
 
-Pasos para Replicar el Entorno
+1. **Clonar el repositorio:**
+   git clone https://github.com/tu-usuario/tp_integrador.git
+   cd tp_integrador
 
-    Clonar el repositorio:
-    Bash
+2. **Crear y preparar la base de datos:**
+   createdb rag_docs_db
 
-    git clone [https://github.com/tu-usuario/tp_integrador.git](https://github.com/tu-usuario/tp_integrador.git)
-    cd tp_integrador
+3. **Ejecutar el esquema físico DDL (Fase 1):**
+   psql -U postgres -d rag_docs_db -f db/estructura/01_schema.sql
 
-    Crear y preparar la base de datos:
-    Bash
+4. **Cargar el lote de datos de prueba (Fase 2):**
+   psql -U postgres -d rag_docs_db -f db/datos/02_seed.sql
 
-    createdb rag_docs_db
+5. **Crear los índices de optimización vectorial y B-Tree (Fase 3):**
+   psql -U postgres -d rag_docs_db -f db/indices_vistas/03_indices.sql
 
-    Ejecutar el esquema físico DDL (Fase 1):
-    Bash
+6. **Ejecutar y validar las consultas representativas (Fase 4):**
+   psql -U postgres -d rag_docs_db -f db/consultas/04_consultas.sql
 
-    psql -U postgres -d rag_docs_db -f db/estructura/01_schema.sql
+---
 
-    Cargar el lote de datos de prueba (Fase 2):
-    Bash
+## 🛠️ Consultas Incluidas en la Evaluación
 
-    psql -U postgres -d rag_docs_db -f db/datos/02_seed.sql
+En el archivo `db/consultas/04_consultas.sql` se incluyen las consultas requeridas que responden a las necesidades clave del negocio:
 
-    Crear los índices de optimización vectorial y B-Tree (Fase 3):
-    Bash
-
-    psql -U postgres -d rag_docs_db -f db/indices_vistas/03_indices.sql
-
-    Ejecutar y validar las consultas representativas (Fase 4):
-    Bash
-
-    psql -U postgres -d rag_docs_db -f db/consultas/04_consultas.sql
-
-🛠️ Consultas Incluidas en la Evaluación
-
-En el archivo db/consultas/04_consultas.sql se incluyen las 5 consultas requeridas que responden a las necesidades clave del negocio:
-
-    Búsqueda Vectorial Híbrida RAG: Búsqueda por similitud coseno con filtro de seguridad de área y estado de vigencia del documento.
-
-    Auditoría y Trazabilidad: Consulta del historial de respuestas RAG con las fuentes exactas y scores de similitud utilizados.
-
-    Métricas y Analytics: Reporte de los documentos más consultados/citados por la Inteligencia Artificial en los últimos 30 días.
-
-    Control de Obsolecencia e Integridad: Detección de fragmentos activos pertenecientes a versiones archivadas o dadas de baja.
-
-    Optimización e Índices: Consulta con análisis de plan de ejecución (EXPLAIN ANALYZE) demostrando el uso de los índices HNSW y B-Tree.
+* **1. Búsqueda Vectorial Híbrida RAG:** Búsqueda por similitud coseno con filtro de seguridad de área y estado de vigencia del documento.
+* **2. Auditoría y Trazabilidad:** Consulta del historial de respuestas RAG con las fuentes exactas y scores de similitud utilizados.
+* **3. Métricas y Analytics:** Reporte de los documentos más consultados/citados por la Inteligencia Artificial en los últimos 30 días.
+* **4. Control de Obsolecencia e Integridad:** Detección de fragmentos activos pertenecientes a versiones archivadas o dadas de baja.
+* **5. Optimización e Índices:** Consulta con análisis de plan de ejecución (`EXPLAIN ANALYZE`) demostrando el uso de los índices HNSW y B-Tree.
