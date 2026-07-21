@@ -1,0 +1,15 @@
+[
+  {
+    "documento_id": 1,
+    "titulo": "Manual Técnico: Turbinas de Gas Serie X100",
+    "categoria": "Manual Técnico",
+    "area_responsable": "Operaciones e Ingeniería",
+    "nivel_acceso_requerido": "Tecnico_Avanzado",
+    "estado": "vigente",
+    "version_actual": {
+      "numero_version": "2.4",
+      "fecha_publicacion": "2026-03-15T08:30:00Z",
+      "url_archivo_origen": "data/ejemplos/archivos_fuente/MN-TURB-001.pdf"
+    }
+  }
+]
