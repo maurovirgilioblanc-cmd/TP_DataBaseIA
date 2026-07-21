@@ -1,0 +1,13 @@
+[
+  {
+    "fragmento_id": 101,
+    "documento_id": 1,
+    "numero_secuencia": 1,
+    "contenido_texto": "En caso de detectar una vibración superior a los 4.5 mm/s en el eje principal de la turbina, el operador deberá iniciar el protocolo de parada de emergencia inmediata.",
+    "metadatos_recuperacion": {
+      "pagina_pdf": 1,
+      "seccion": "4",
+      "archivo_origen": "MN-TURB-001.pdf"
+    }
+  }
+]
