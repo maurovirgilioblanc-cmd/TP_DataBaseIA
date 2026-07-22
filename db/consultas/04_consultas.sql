@@ -39,7 +39,7 @@ JOIN fuentes_consulta fc ON c.consulta_id = fc.consulta_id
 JOIN fragmentos f ON fc.fragmento_id = f.fragmento_id
 JOIN versiones_documento v ON f.version_id = v.version_id
 JOIN documentos d ON v.documento_id = d.documento_id
-ORDER BY c.fecha_consulta DESC;
+ORDER BY c.fecha_hora DESC;
 
 
 -- ==============================================================================
