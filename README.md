@@ -129,3 +129,7 @@ En el archivo `db/consultas/04_consultas.sql` se incluyen las consultas requerid
 * **3. Métricas y Analytics:** Reporte de los documentos más consultados/citados por la Inteligencia Artificial en los últimos 30 días.
 * **4. Control de Obsolecencia e Integridad:** Detección de fragmentos activos pertenecientes a versiones archivadas o dadas de baja.
 * **5. Optimización e Índices:** Consulta con análisis de plan de ejecución (`EXPLAIN ANALYZE`) demostrando el uso de los índices HNSW y B-Tree.
+
+## 🔮 Limitaciones y Futuras Mejoras
+* **Generación Real de Embeddings (LLM API):** En la versión de prueba actual se utilizan vectores sintéticos/mock para la demostración offline. Para un entorno productivo se integraría la API de OpenAI (`text-embedding-3-small`) u Ollama (`nomic-embed-text`) dentro del pipeline de Python.
+* **Procesamiento de Archivos Escaneados:** Extensión del pipeline de ingesta mediante bibliotecas de OCR (como `pytesseract` o `pdf2image`) para admitir documentos PDF escaneados o digitalizados en formato imagen.
