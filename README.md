@@ -103,7 +103,7 @@ El repositorio incluye un servicio de monitoreo en tiempo real (`scripts/ingesta
 ### Pasos para Ejecutar el Pipeline en Vivo
 
 1. **Instalar las dependencias de Python necesarias:**
-   `pip install psycopg2-binary pypdf watchdog langchain-text-splitters`
+   `pip install -r requirements.txt`
 
 2. **Configurar las credenciales de la base de datos:**
    Abrir el archivo `scripts/ingesta_automatica.py` y verificar que el diccionario `DB_CONFIG` tenga tu usuario, contraseña y puerto de PostgreSQL.
