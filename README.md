@@ -34,6 +34,7 @@ El repositorio sigue la organización solicitada por la cátedra:
 ```text
 tp_integrador/
 ├── README.md                          # Presentación general del proyecto
+├── requirements.txt                   # Dependencias de Python
 ├── docs/                              # Documentación técnica y diagramas
 │   ├── informe.pdf                    # Informe técnico completo
 │   ├── modelo_conceptual.png          # Diagrama Entidad-Relación (DER)
